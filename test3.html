@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>头像选择</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .all_photo {
+            width: 420px;
+            height: 162px;
+            padding: 10px 8px 0 15px;
+            background-color: #f4feff;
+            border: solid 1px #aec7cb;
+            position: relative;
+            top: -1px;
+            z-index: 0;
+        }
+
+        .all_photo .mouse_active {
+            background-color: #ff7100;
+        }
+
+        .all_photo div {
+            width: 52px;
+            height: 50px;
+            display: inline;
+            text-align: center;
+            padding-top: 2px;
+            border: solid 1px #cacaca;
+            margin: 10px 7px 14px 20px;
+            float: left;
+        }
+
+        .all_photo div img {
+            width: 48px;
+            height: 48px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container p5">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="nav-item mr-1 active">
+                <a href="#section-one" class="nav-link bg-primary text-white" data-toggle="tab">Section one</a>
+            </li>
+            <li class="nav-item m1-1">
+                <a href="#section-two" class="nav-link bg-primary text-white" data-toggle="tab">Section one</a>
+            </li>
+        </ul>
+    </div> -->
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                aria-controls="pills-home" aria-selected="true">卡通</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                aria-controls="pills-profile" aria-selected="false">酷男</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                aria-controls="pills-contact" aria-selected="false">靓女</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-meinv-tab" data-toggle="pill" href="#pills-meinv" role="tab"
+                aria-controls="pills-meinv" aria-selected="false">动漫</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="all_photo" id="all_photo_0" style="display :block">
+                <div id="head_index_1" onmouseover="mouseoverchangeclass(1)" onmouseout="mouseoutchangeclass(1)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(1)" style="cursor:pointer"><img
+                            src="img/kt1.jpg" /></a>
+                </div>
+                <div id="head_index_2" onmouseover="mouseoverchangeclass(2)" onmouseout="mouseoutchangeclass(2)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(2)" style="cursor:pointer"><img
+                            src="img/kt2.jpg" /></a>
+                </div>
+                <div id="head_index_3" onmouseover="mouseoverchangeclass(3)" onmouseout="mouseoutchangeclass(3)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(3)" style="cursor:pointer"><img
+                            src="img/kt3.jpg" /></a>
+                </div>
+                <div id="head_index_4" onmouseover="mouseoverchangeclass(4)" onmouseout="mouseoutchangeclass(4)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(4)" style="cursor:pointer"><img
+                            src="img/kt4.jpg" /></a>
+                </div>
+                <div id="head_index_5" onmouseover="mouseoverchangeclass(5)" onmouseout="mouseoutchangeclass(5)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(5)" style="cursor:pointer"><img
+                            src="img/kt5.jpg" /></a>
+                </div>
+                <div id="head_index_6" onmouseover="mouseoverchangeclass(6)" onmouseout="mouseoutchangeclass(6)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(6)" style="cursor:pointer"><img
+                            src="img/kt6.jpg" /></a>
+                </div>
+                <div id="head_index_7" onmouseover="mouseoverchangeclass(7)" onmouseout="mouseoutchangeclass(7)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(7)" style="cursor:pointer"><img
+                            src="img/kt7.jpg" /></a>
+                </div>
+                <div id="head_index_8" onmouseover="mouseoverchangeclass(8)" onmouseout="mouseoutchangeclass(8)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(8)" style="cursor:pointer"><img
+                            src="img/kt8.jpg" /></a>
+                </div>
+                <div id="head_index_9" onmouseover="mouseoverchangeclass(9)" onmouseout="mouseoutchangeclass(9)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(9)" style="cursor:pointer"><img
+                            src="img/kt9.jpg" /></a>
+                </div>
+                <div id="head_index_10" onmouseover="mouseoverchangeclass(10)" onmouseout="mouseoutchangeclass(10)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(10)" style="cursor:pointer"><img
+                            src="img/kt10.jpg" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="all_photo" id="all_photo_1">
+                <div id="head_index_11" onmouseover="mouseoverchangeclass(11)" onmouseout="mouseoutchangeclass(11)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(11)"><img src="img/kn1.jpeg" /></a>
+                </div>
+                <div id="head_index_12" onmouseover="mouseoverchangeclass(12)" onmouseout="mouseoutchangeclass(12)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(12)"><img src="img/kn2.jpeg" /></a>
+                </div>
+                <div id="head_index_13" onmouseover="mouseoverchangeclass(13)" onmouseout="mouseoutchangeclass(13)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(13)"><img src="img/kn3.jpeg" /></a>
+                </div>
+                <div id="head_index_14" onmouseover="mouseoverchangeclass(14)" onmouseout="mouseoutchangeclass(14)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(14)"><img src="img/kn4.jpeg" /></a>
+                </div>
+                <div id="head_index_15" onmouseover="mouseoverchangeclass(15)" onmouseout="mouseoutchangeclass(15)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(15)"><img src="img/kn5.jpeg" /></a>
+                </div>
+                <div id="head_index_16" onmouseover="mouseoverchangeclass(16)" onmouseout="mouseoutchangeclass(16)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(16)"><img src="img/kn6.jpeg" /></a>
+                </div>
+                <div id="head_index_17" onmouseover="mouseoverchangeclass(17)" onmouseout="mouseoutchangeclass(17)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(17)"><img src="img/kn7.jpeg" /></a>
+                </div>
+                <div id="head_index_18" onmouseover="mouseoverchangeclass(18)" onmouseout="mouseoutchangeclass(18)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(18)"><img src="img/kn8.jpeg" /></a>
+                </div>
+                <div id="head_index_19" onmouseover="mouseoverchangeclass(19)" onmouseout="mouseoutchangeclass(19)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(19)"><img src="img/kn9.jpeg" /></a>
+                </div>
+                <div id="head_index_20" onmouseover="mouseoverchangeclass(20)" onmouseout="mouseoutchangeclass(20)">
+                    <a onclick="javascript:ChangeClientHeadPhoto(20)"><img src="img/kn10.jpeg" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="all_photo" id="all_photo_2">
+                <div id="head_index_21" onmouseover="mouseoverchangeclass(21)" onmouseout="mouseoutchangeclass(21)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(21)"><img src="img/mm1.jpeg"></a>
+                </div>
+                <div id="head_index_22" onmouseover="mouseoverchangeclass(22)" onmouseout="mouseoutchangeclass(22)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(22)"><img src="img/mm2.jpeg"></a>
+                </div>
+                <div id="head_index_23" onmouseover="mouseoverchangeclass(23)" onmouseout="mouseoutchangeclass(23)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(23)"><img src="img/mm3.jpeg"></a>
+                </div>
+                <div id="head_index_24" onmouseover="mouseoverchangeclass(24)" onmouseout="mouseoutchangeclass(24)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(24)"><img src="img/mm4.jpeg"></a>
+                </div>
+                <div id="head_index_25" onmouseover="mouseoverchangeclass(25)" onmouseout="mouseoutchangeclass(25)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(25)"><img src="img/mm5.jpeg"></a>
+                </div>
+                <div id="head_index_26" onmouseover="mouseoverchangeclass(26)" onmouseout="mouseoutchangeclass(26)"
+                    class="" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(26)"><img src="img/mm6.jpeg"></a>
+                </div>
+                <div id="head_index_27" onmouseover="mouseoverchangeclass(27)" onmouseout="mouseoutchangeclass(27)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(27)"><img src="img/mm7.jpeg"></a>
+                </div>
+                <div id="head_index_28" onmouseover="mouseoverchangeclass(28)" onmouseout="mouseoutchangeclass(28)"
+                    class="" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(28)"><img src="img/mm8.jpeg"></a>
+                </div>
+                <div id="head_index_29" onmouseover="mouseoverchangeclass(29)" onmouseout="mouseoutchangeclass(29)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(29)"><img src="img/mm9.jpeg"></a>
+                </div>
+                <div id="head_index_30" onmouseover="mouseoverchangeclass(30)" onmouseout="mouseoutchangeclass(30)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(30)"><img src="img/mm10.jpeg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-meinv" role="tabpanel" aria-labelledby="pills-meinv-tab">
+            <div class="all_photo" id="all_photo_3">
+                <div id="head_index_31" onmouseover="mouseoverchangeclass(31)" onmouseout="mouseoutchangeclass(31)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(31)"><img src="img/dm1.jpg"></a>
+                </div>
+                <div id="head_index_32" onmouseover="mouseoverchangeclass(32)" onmouseout="mouseoutchangeclass(32)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(32)"><img src="img/dm2.jpg"></a>
+                </div>
+                <div id="head_index_33" onmouseover="mouseoverchangeclass(33)" onmouseout="mouseoutchangeclass(33)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(33)"><img src="img/dm3.jpg"></a>
+                </div>
+                <div id="head_index_34" onmouseover="mouseoverchangeclass(34)" onmouseout="mouseoutchangeclass(34)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(34)"><img src="img/dm4.jpg"></a>
+                </div>
+                <div id="head_index_35" onmouseover="mouseoverchangeclass(35)" onmouseout="mouseoutchangeclass(35)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(35)"><img src="img/dm5.jpg"></a>
+                </div>
+                <div id="head_index_36" onmouseover="mouseoverchangeclass(36)" onmouseout="mouseoutchangeclass(36)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(36)"><img src="img/dm6.jpg"></a>
+                </div>
+                <div id="head_index_37" onmouseover="mouseoverchangeclass(37)" onmouseout="mouseoutchangeclass(37)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(37)"><img src="img/dm7.jpg"></a>
+                </div>
+                <div id="head_index_38" onmouseover="mouseoverchangeclass(38)" onmouseout="mouseoutchangeclass(38)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(38)"><img src="img/dm8.jpg"></a>
+                </div>
+                <div id="head_index_39" onmouseover="mouseoverchangeclass(39)" onmouseout="mouseoutchangeclass(39)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(39)"><img src="img/dm9.jpg"></a>
+                </div>
+                <div id="head_index_40" onmouseover="mouseoverchangeclass(40)" onmouseout="mouseoutchangeclass(40)"
+                    class="mouse_out" classname="">
+                    <a onclick="javascript:ChangeClientHeadPhoto(40)"><img src="img/dm10.jpg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
