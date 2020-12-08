@@ -493,3 +493,87 @@ input {
     cursor: pointer;
     float: left;
 }
+
+/* 评论 */
+.my_main {
+    width: 780px;
+    padding: 0 0 0 10px;
+    float: left;
+}
+.points {
+    background-color: #fffbe7;
+    border: 1px solid #ffecb2;
+    line-height: 34px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+.fr {
+    float: right;
+    font-size:12px;
+}
+.order_list {
+    padding: 20px 0 0;
+    word-break: break-all;
+}
+.order {
+    border: 1px solid #dcdcdc;
+    margin-bottom: 20px;
+}
+.order_head {
+    height: 34px;
+    line-height: 34px;
+    background-color: #f5f5f5;
+}
+.order_head .info {
+    width: 445px;
+    padding-left: 15px;
+    float: left;
+}
+.order_head .shop {
+    float: left;
+}
+.order_box {
+    padding: 20px 0 10px;
+}
+.order .carousel {
+    width: 600px;
+    position: relative;
+    margin: 0 30px 0 20px;
+    display: inline-block;
+    padding: 0 0 0 10px;
+}
+.order .carousel .arrow.unable {
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    cursor: default;
+}
+.order .carousel .arrow {
+    width: 18px;
+    height: 36px;
+    position: absolute;
+    left: 0;
+    top: 17px;
+    background: url(../img/icon.png) 0 -18px no-repeat;
+}
+.order .carousel .arrow.right {
+    left: auto;
+    right: 0;
+    background-position: -18px -18px;
+}
+/* 打星区域 */
+.order .comment {
+    border-top: 1px solid #dcdcdc;
+    padding-top: 20px;
+    position: relative;
+}
+.order .book_com .left_show {
+    width: 150px;
+    padding: 0 70px 20px;
+}
+.order .comment .right_show {
+    width: 500px;
+    height:300px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 0 10px 0;
+}
