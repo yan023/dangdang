@@ -629,7 +629,7 @@ input {
     vertical-align: top;
     padding: 0 0 10px 0;
 }
-.order .comment .right_show .rating,.think,.upload{
+.order .comment .right_show .rat,.think,.upload{
     height: 35px;
     padding: 0 0 8px;
 }
@@ -638,7 +638,9 @@ input {
     padding: 0 0 8px;
 }
 .order .comment .right_show .name{
+    font-size: 12px;
     float: left;
+    color: #646464;
 }
 .order .comment .right_show .txt {
     width: 390px;
@@ -670,4 +672,44 @@ input {
     line-height: 120px;  
     float: left; 
     color:#969696;
+}
+/* 自服务评论 */
+.order .comment .comm_serve {
+    border-top: 1px solid #dcdcdc;
+    padding-top: 20px;
+}
+.rating_pr{
+    height: 35px;
+    padding: 0 0 8px;
+}
+/* 发表评论*/
+.order .book_com .submit {
+    background-color: #fff;
+    border: none;
+    padding: 0 50px 30px 350px;
+}
+.btn_big {
+    width: 108px;
+    height: 36px;
+    color: #fff;
+    line-height: 36px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #ff2832;
+    display: inline-block;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+/* .order .comment .submit .choose {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background: url(../dangdang/img/icon.png) -14px -54px no-repeat;
+    margin-right: 8px;
+    vertical-align: text-bottom;
+} */
+.unname_rating{
+    font-size: 14px;
+    color: #646464;
+    padding: 0 0 10px 5px;
 }

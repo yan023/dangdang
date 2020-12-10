@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>评分</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="mark">
+            <h1>宝贝与描述相符(打分匿名)</h1>
+            <div id="pic">
+                <img src="images/star0.png" title="1" name="0" />
+                <img src="images/star0.png" title="2" name="1" />
+                <img src="images/star0.png" title="3" name="2" />
+                <img src="images/star0.png" title="4" name="3" />
+                <img src="images/star0.png" title="5" name="4" />
+                <br />
+            </div>
+            <form>
+                <textarea cols="40" rows="8" value="" id='txt'></textarea>
+                <br />
+                <button class="btn">公开评论</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        var pic = document.getElementById("pic");
+        var txt = document.getElementById("txt");
+        var divList = pic.children;
+        var flag = 0;
+        var arr = ["差", "一般", "中等", "还行", "还好"];
+        for (var i = 0; i < divList.length; i++) {
+            divList[i].onmouseover = function () {
+                this.setAttribute("src", "./images/star2.png");
+                txt.innerHTML = arr[this.title - 1];//获取当前对象的元素属性
+            }
+            divList[i].onclick = function () {
+                flag = 1;
+                if (this.title >= 3) {
+                    for (var k = 0; k < this.title; k++) {
+                        divList[k].setAttribute("src", "./images/star2.png");
+                        txt.innerHTML = arr[k];
+                    }
+                }
+                else {
+                    for (var k = 0; k < this.title; k++) {
+                        divList[k].setAttribute("src", "./images/star1.png");
+                        txt.innerHTML = arr[k];
+                    }
+                }
+
+            }
+            divList[i].onmouseout = function () {
+                if (flag == 0) {
+                    this.setAttribute("src", "./images/star0.png");
+                    txt.innerHTML = "";//id属性为txt的页面内容为空
+                }
+                else {
+                    if (this.title >= 3) {
+                        for (var k = 0; k < this.title; k++) {
+                            divList[k].setAttribute("src", "./images/star2.png");
+                            txt.innerHTML = arr[k];
+                        }
+                    }
+                    else {
+                        for (var k = 0; k < this.title; k++) {
+                            divList[k].setAttribute("src", "./images/star1.png");
+                            txt.innerHTML = arr[k];
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 
+    1.先得到要操作的网页元素的DOM对象img的DOM对象，textarea的DOM对象
+    2.遍历图片的DOM对象集合，绑定事件，绑定鼠标移上的事件，鼠标移开的事件
+    3.事件触发时，回调函数的执行，鼠标移上时，判断当前移上的图片是第几个图片，获取当前图片的title属性
+    根据是第几张图，来决定如何切换图片 -->
+    <script type="text/javascript"></script>
+</body>
+<script>
+</script>
+
+</html>

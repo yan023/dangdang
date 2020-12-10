@@ -12,6 +12,8 @@
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
+    <!-- 星星需求 -->
+    <link href="../dangdang/assets/css/star-rating.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 <div class="main_frame">
     <div class="mydang_left">
@@ -89,20 +91,24 @@
         <div class="points">
             当前银铃铛：
             <span class="red">3</span>
-            <span class="fr">写评论、赚银铃铛！评论内容越丰富银铃铛越多！ 了解<a href="http://help.dangdang.com/details/page52#p3"
-                    target="_blank">银铃铛规则</a></span>
+            <span class="fr">写评论、赚银铃铛！评论内容越丰富银铃铛越多！ 了解 <a href="http://help.dangdang.com/details/page52#p3"
+                    target="_blank" style="color:#969696;">银铃铛规则</a></span>
         </div>
+
         <div class="order_list">
             <div class="order">
                 <div id="order_head">
                     <div class="order_head">
-                        <div class="info">订单号：<span id="order_id">
-                            </span>下单时间：<span id="order_creation_date"></span>
+                        <div class="info">订单号：<span id="order_id">xxxxxxx</span>
+                            下单时间：<span id="order_creation_date">xxxxxxxx</span>
                         </div>
+
                         <div class="shop" rel="0">
-                            <span class="icon"></span><span class="red">当当自营</span>
+                            <span class="icon"></span>
+                            <span class="red">当当自营</span>
                         </div>
                     </div>
+
                     <div class="order_box">
                         <div class="carousel">
                             <a class="arrow unable" id="arrow_prev" rel="0"></a>
@@ -112,87 +118,63 @@
                                     <a class="goods choosen"><img src=""></a>
                                 </li>
                             </ul>
-
                         </div>
-                        <!-- <div class="com_info"></div> -->
                     </div>
-
                 </div>
 
                 <div class="comment book_com" id="comment_write" style="display: block;">
                     <div class="comm_goods" id="comm_goods">
                         <div class="left_show">
                             <a href="" target="_blank" title="">
-                                <img src="" width="150" height="150"></a>
-                            <a href="" title="">商品文字简介+带链接</a>
+                                <img src="" width="130" height="150"></a>
+                            <a href="" title="">商品文字简介带链接</a>
                         </div>
                         <div class="right_show">
-                            <ul class="comm_list">
-                                <li>
-                                    <div class="name">商品评分</div>
-                                    <span class="star" name="goods_star" data-score="0"
-                                        style="width: 110px;"></em>请对内容进行评分</span>
-                                </li>
-                                <li>
-                                    <div class="name">大家认为</div>
-                                    <!-- <p class="tag_box" id="quick_comment">
-                                        <a href="javascript:;" class="tag" rel="330">装帧精美</a>
-                                        <a href="javascript:;" class="tag" rel="333">经典必读</a>
-                                        <a href="javascript:;" class="tag" rel="1140">温情感人</a>
-                                        <a href="javascript:;" class="tag" rel="331">情节曲折</a>
-                                        <a href="javascript:;" class="tag" rel="332">引人入胜</a>
-                                    </p> -->
-                                </li>
-                                <li class="rela">
-                                    <div class="name">评论晒单</div>
-                                    <div class="txt">
-                                        <div class="comm_tip" id="comm_tip">主人，商品这么赞，快码字表扬吧~图文并茂有机会获得额外银铃铛。快来评论吧~
-                                        </div>
-                                        <textarea name="comment_txt" id="comment_txt" cols="" rows=""
-                                            maxlength="2000"></textarea>
-                                        <span class="num" id="text_num">2000</span>
-                                    </div>
-                                    <div class="wrong_tip" style="display: none" id="comment_wrong_tips">
-                                        <em></em>评论内容至少需要15个字符</div>
-                                </li>
-                                <li>
-                                    <div class="name">&nbsp;</div>
-                                    <dl class="upload">
-                                        <span id="img_list"></span>
-                                        <dd class="up" id="upload"><input id="fileToUpload" type="file"
-                                                name="fileToUpload" accept="image/*"></dd>
-                                        <dt id="upload_size">0/5</dt>
-                                    </dl>
-                                    <form id="formToUpload" method="post" action="#" enctype="multipart/form-data"
-                                        style="display: none"> <input id="ajaxSubmit" type="button" value="异步提交">
-                                    </form>
-                                </li>
-                            </ul>
+                            <div class="rat">
+                            </div>
+                            <div class="think">
+                                <div class="name">大家认为</div>
+                            </div>
+                            <div class="rela">
+                                <div class="name">评论晒单</div>
+                                <div class="txt">
+                                    <textarea class="txt_intro"
+                                        placeholder="主人，商品这么赞，快码字表扬吧~图文并茂有机会获得额外银铃铛。快来评论吧~"></textarea>
+                                </div>
+                            </div>
+                            <div class="upload">
+                                <div class="upupload">
+                                    <label class="upFile">
+                                        <span class="upFile" style="text-align: center;float: left;"><img
+                                                src="../dangdang/img/upload_new.png" alt=""></span>
+                                        <input class="upFile" type="file" name="upFile" style="display:none;">
+                                    </label>
+                                </div>
+                                <div class="upload_size">0/5</div>
+                            </div>
                         </div>
                     </div>
                     <div class="comm_serve" id="comm_serve" style="display: block;">
-                        <div class="left_show"> <img src="images/serve_dd.png"> </div>
+                        <div class="left_show"> <img src="../dangdang/img/serve_dd.png"> </div>
                         <div class="right_show">
-                            <ul class="comm_list">
-                                <li>
-                                    <div class="title">自营服务评论<span class="tip red" id="service_score"
-                                            style="display:none;"><em></em>请完成所有服务评分</span></div>
-                                </li>
-                                <li>
-                                    <div class="name">商品包装</div>
-                                </li>
-                                <li>
-                                    <div class="name">物流速度</div>
-                                </li>
-                                <li>
-                                    <div class="name">快递员满意度</div>
-                                </li>
-                            </ul>
+                            <div class="rating_pr">
+                                <div class="name_pr">自营服务评论</div>
+                            </div>
+                            <div class="rat">
+                                <div class="name">商品包装</div>
+                            </div>
+                            <div class="rat">
+                                <div class="name">物流速度</div>
+                            </div>
+                            <div class="rat">
+                                <div class="name">快递员满意度</div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="submit">
-                        <a href="javascript:;" class="btn_big" id="submit_comment">发表评论</a>
-                        <a href="javascript:;" class="choose " id="anonymous_submit"></a><label>匿名评论</label>
+                        <button class="btn_big">发表评论</button>
+                        <input type="checkbox" class="choose"></input><label class="unname_rating">匿名评论</label>
                     </div>
                 </div>
             </div>
@@ -202,6 +184,9 @@
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/popper.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/star-rating.min.js"></script>
+
+
 </body>
 
 </html>
