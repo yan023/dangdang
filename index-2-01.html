@@ -14,9 +14,10 @@
     <link href="style.css" rel="stylesheet">
     <!-- 星星需求 -->
     <link href="../dangdang/assets/css/star-rating.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
 </head>
-<div class="main_frame">
-    <div class="mydang_left">
+<div class="mydang">
+    <div class="mydang_left1">
         <h3 class="my_menu_title"><a href="//myhome.dangdang.com/">我的当当</a></h3>
         <dl>
             <dt>我的交易</dt>
@@ -131,6 +132,13 @@
                         </div>
                         <div class="right_show">
                             <div class="rat">
+                                <div class="name">商品评价</div>
+                                <div class="rating-lists">
+                                    <form>
+                                        <input class="rating rating1" id="1" name="comment" min="0" max="5" step="1"
+                                            data-size="sm" value="0">
+                                    </form>
+                                </div>
                             </div>
                             <div class="think">
                                 <div class="name">大家认为</div>
@@ -162,14 +170,31 @@
                             </div>
                             <div class="rat">
                                 <div class="name">商品包装</div>
+                                <div class="rating-lists">
+                                    <form>
+                                        <input class="rating rating1" id="1" name="comment" min="0" max="5" step="1"
+                                            data-size="sm" value="0">
+                                    </form>
+                                </div>
                             </div>
                             <div class="rat">
                                 <div class="name">物流速度</div>
+                                <div class="rating-lists">
+                                    <form>
+                                        <input class="rating rating1" id="1" name="comment" min="0" max="5" step="1"
+                                            data-size="sm" value="0">
+                                    </form>
+                                </div>
                             </div>
                             <div class="rat">
                                 <div class="name">快递员满意度</div>
+                                <div class="rating-lists">
+                                    <form>
+                                        <input class="rating rating1" id="1" name="comment" min="0" max="5" step="1"
+                                            data-size="sm" value="0">
+                                    </form>
+                                </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="submit">
@@ -185,6 +210,27 @@
 <script src="assets/js/popper.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/star-rating.min.js"></script>
+<script>
+    $('.rating').rating({
+        min: 0, /*星星的最小数值*/
+        max: 5, /*星星的最大数值*/
+        step: 0.5, /*表示增加减少的数量*/
+        size: 'sm', /*星星的大小 有lg,sm,xl,xs*/
+        showClear: false, /*是否显示清除按钮*/
+        disabled: false, /*不可用设置 默认false可以点击  true禁止点击*/
+        readonly: false,  /*只读模式 跟上面一样效果，不知道啥区别*/
+        // starCaptions: { 1: '1分 太坑', 2: '2分 凑合', 3: '3分 一般', 4: '4分 很好', 5: '5分 非常好' },
+        // starCaptionClasses: { 1: 'text-danger', 2: 'text-warning', 3: 'text-info', 4: 'text-primary', 5: 'text-success' }
+        starCaptions: { 0: '点击星星评分', 0.5: '1分 超烂啊', 1: '2分 不值一看', 1.5: '3分 水准之下', 2: '4分 水准之下', 2.5: '5分 聊胜于无', 3: '6分 聊胜于无', 3.5: '7分 值得一看', 4: '8分 值得一看', 4.5: '9分 极力推荐', 5: '10分 极力推荐' },
+        starCaptionClasses: { 0: 'text-info', 0.5: 'text-info', 1: 'text-info', 1.5: 'text-info', 2: 'text-info', 2.5: 'text-info', 3: 'text-info', 3.5: 'text-info', 4: 'text-info', 4.5: 'text-info', 5: 'text-info' }
+    });
+
+    /*这里是更改评分后，星星的打分显示 .rating('update',3)这样*/
+    $('.rating1').rating({}).rating('update', 1);
+    $('.rating2').rating({}).rating('update', 1);
+    $('.rating3').rating({}).rating('update', 1);
+    $('.rating4').rating({}).rating('update', 1);
+</script>
 
 
 </body>
