@@ -601,9 +601,10 @@ input {
     font-size: 14px;
 }
 .order_box {
-    height:85px;
+    height:100px;
     padding: 20px 0 10px;
 }
+/* 订单商品*/
 .order .carousel {
     width: 480px;
     position: relative;
@@ -639,6 +640,13 @@ input {
     display: inline-block;
     position: relative;
 }
+.goods {
+    display: block;
+    border: 1px solid #f1f1f1;
+    width: 68px;
+    height: 68px;
+    cursor: pointer;
+}
 
 .order .comment {
     border-top: 1px solid #dcdcdc;
@@ -646,13 +654,13 @@ input {
     position: relative;
 }
 
-.order .book_com .left_show {
+/* .order .book_com .left_show {
     width: 152px;
     padding: 0 70px 20px;
-}
+} */
 .order .comment .left_show {
     padding: 0 40px 20px 80px;
-    width: 125px;
+    width: 230px;
     text-align: center;
     line-height: 18px;
     color: #b69d8f;
@@ -662,7 +670,25 @@ input {
 .order .comment .right_show {
     display: inline-block;
     vertical-align: top;
-    padding: 0 0 10px 160px;
+    padding: 0 0 10px 100px;
+}
+.tag_box {
+    display: inline-block;
+    width: 500px;
+    color: #323232;
+    margin-bottom:-10px;
+    padding-left:30px;
+}
+.tag {
+    border-radius: 2px;
+    display: inline-block;
+    padding: 0 10px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin: 5px 10px 10px 0;
+    background-color: #f5f5f5;
+    color: #323232;
 }
 .order .comment .right_show .think,.upload{
     height: 35px;
@@ -673,7 +699,7 @@ input {
     padding: 0 0 8px;
 }
 .rating-lists{
-    margin-left: 80px;
+    margin-left: 90px;
 }
 .order .comment .right_show .rela{
     height: 110px;
